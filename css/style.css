@@ -1,0 +1,657 @@
+/***********************************
+* author : rayhanprima99@gmail.com *
+************************************/
+.clear {
+ clear : both;
+}
+section {
+ position   : relative;
+ padding    : 100px 0 50px;
+ text-align : center;
+}
+section h1 {
+ display     : inline-block;
+ width       : 90%;
+ margin      : 10px 0;
+ padding     : 10px;
+ outline     : 5px solid rgba(0,0,0,1);
+ font-family : comfortaa;
+ font-size   : 3em;
+}
+@media screen and (max-width:480px) {
+ section h1 {
+   font-size : 2em;
+ }
+}
+/* ============================================================
+*  ============  NAVIGASI  ============
+*  ============================================================ */
+nav {
+ z-index     : 10;
+ position    : fixed;
+ top         : 0;
+ width       : 100%;
+ color       : white;
+ font-family : comfortaa;
+}
+nav .navigasi {
+ top              : 0;
+ width            : 100%;
+ height           : 55px;
+ padding          : 5px 15px;
+ opacity          : 1;
+ background-color : #444;
+}
+nav .navigasi p,
+nav .navigasi span {
+ display : inline;
+ padding : 5px 10px;
+ cursor  : pointer;
+}
+nav .navigasi p {
+ font-size : 1.5em;
+}
+nav .navigasi span {
+ border           : 0;
+ border-radius    : 5px;
+ opacity          : 0.8;
+ background-color : #aaa;
+}
+nav .navigasi span:hover {
+ opacity : 1;
+}
+nav ul {
+ width            : 100%;
+ margin-top       : -100%;
+ margin-left      : 0%;
+ padding          : 10px 0;
+ box-shadow       : 0 5px 20px #444;
+ background-color : rgba(204,204,204,.8);
+ transition       : all 300ms ease;
+ transform        : translateX(0%) translateY(-200%);
+}
+.nav-effect {
+ animation-direction       : alternate;
+ animation-duration        : 0.7s;
+ animation-fill-mode       : forwards;
+ animation-name            : slide-in;
+ animation-timing-function : ease-in-out;
+}
+nav ul li {
+ width      : 100%;
+ padding    : 5px;
+ text-align : center;
+}
+nav ul li a {
+ display          : inline-block;
+ width            : 200px;
+ padding          : 20px;
+ color            : white;
+ border           : 0;
+ border-radius    : 5px;
+ font-size        : 1.5em;
+ opacity          : 0.9;
+ background-color : #444;
+ cursor           : pointer;
+}
+nav ul li a:hover {
+ color           : white;
+ text-decoration : none;
+ opacity         : 1;
+}
+@keyframes slide-in {
+ 0% {
+   margin-top : 0%;
+   transform  : translateY(-100%);
+ }
+ 20% {
+   transform : translateY(4%);
+ }
+ 40% {
+   transform : translateY(-3%);
+ }
+ 60% {
+   transform : translateY(2%);
+ }
+ 80% {
+   transform : translateY(-1%);
+ }
+ 100% {
+   margin-top : 0%;
+   transform  : translateY(0%);
+ }
+}
+@keyframes slideLeft-in {
+ 0% {
+   margin-left : 0%;
+   transform   : translateX(-200%);
+ }
+ 20% {
+   transform : translateX(4%);
+ }
+ 40% {
+   transform : translateX(-3%);
+ }
+ 60% {
+   transform : translateX(2%);
+ }
+ 80% {
+   transform : translateX(-1%);
+ }
+ 100% {
+   margin-left : 0%;
+   transform   : translateX(0%);
+ }
+}
+@media screen and (max-width:768px) {
+ nav .navigasi p {
+   font-size : 1.3em;
+ }
+ nav ul li a {
+   width     : 250px;
+   padding   : 15px;
+   font-size : 1.2em;
+ }
+ nav ul {
+   display     : none;
+   margin-top  : 0%;
+   margin-left : -100%;
+   transform   : translateX(-100%) translateY(0%);
+ }
+ .nav-effect {
+   display        : block;
+   animation-name : slideLeft-in;
+ }
+}
+@media screen and (max-width:480px) {
+ nav ul {
+   padding : 5px 0;
+ }
+ nav ul li a {
+   width   : 200px;
+   padding : 10px;
+ }
+}
+@media screen and (max-width:320px) {
+ nav ul li a {
+   width   : 150px;
+   padding : 5px;
+ }
+}
+/* ============================================================
+*  ============  HEADER  ============
+*  ============================================================ */
+#header {
+ display         : flex;
+ margin-top      : 60px;
+ padding         : 0;
+ justify-content : center;
+ align-items     : center;
+ flex-direction  : column;
+}
+.header-img {
+ height : 490px;
+}
+.img-rayhantanahlot1 {
+ filter          : blur(0);
+ background      : url('../images/kunjungan-industri/raylot1.jpg') center center no-repeat fixed;
+ background-size : cover;
+}
+#header .header-desc {
+ position    : absolute;
+ top         : 120px;
+ width       : auto;
+ margin      : 0 50px;
+ padding     : 1% 0;
+ color       : rgba(255,255,255,1);
+ text-shadow : 0 0 1px rgba(0,0,0,1);
+ font-family : comfortaa;
+ font-weight : bold;
+}
+#header .rayhantanahlot1 h1,
+#header .rayhantanahlot1 p {
+ display    : inline-block;
+ width      : 500px;
+ padding    : 20px 10px;
+ text-align : center;
+}
+#header .rayhantanahlot1 h1 {
+ outline   : 5px solid rgba(255,255,255,1);
+ font-size : 3em;
+}
+#header .rayhantanahlot1 p {
+ font-size : 1.5em;
+}
+#header .owl-controls {
+ position : absolute;
+ bottom   : 10px;
+ width    : 100%;
+ padding  : 5px 0;
+}
+#header .owl-controls .owl-page {
+ margin           : 0 5px;
+ padding          : 5px;
+ border           : 0;
+ border-radius    : 100%;
+ background-color : #333;
+}
+#header .owl-controls .owl-next,
+#header .owl-controls .owl-prev {
+ position         : absolute;
+ bottom           : 250px;
+ text-align       : center;
+ background-color : #333;
+}
+#header .owl-controls .owl-next {
+ right : 2%;
+}
+#header .owl-controls .owl-prev {
+ left : 2%;
+}
+#progressbar {
+ width            : 100%;
+ height           : 5px;
+ background-color : #fff;
+}
+#bar {
+ width            : 0%;
+ height           : 5px;
+ max-width        : 100%;
+ background-color : #333;
+}
+@media screen and (max-width:1024px) {
+ #header .header-desc {
+   width      : 100%;
+   margin     : 0 auto;
+   text-align : center;
+ }
+ #header .rayhantanahlot1 h1,
+ #header .rayhantanahlot1 p {
+   display    : inline-block;
+   width      : 80%;
+   padding    : 20px 10px;
+   text-align : center;
+ }
+}
+@media screen and (max-width:768px) {
+ .header-img {
+   height : 280px;
+ }
+ #header .header-desc {
+   top : 40px;
+ }
+ #header .header-img {
+   background-size : 100% 380px;
+ }
+ #header .rayhantanahlot1 h1,
+ #header .rayhantanahlot1 p {
+   padding : 10px 5px;
+ }
+ #header .rayhantanahlot1 h1 {
+   font-size : 2em;
+ }
+ #header .rayhantanahlot1 p {
+   font-size : 1.2em;
+ }
+}
+@media screen and (max-width:480px) {
+ .header-img {
+   height : 450px;
+ }
+ #header .header-desc {
+   top : 15px;
+ }
+ #header .header-img {
+   background-size : auto 450px;
+ }
+ #header .rayhantanahlot1 h1,
+ #header .rayhantanahlot1 p {
+   width   : 80%;
+   padding : 10px 5px;
+ }
+ #header .rayhantanahlot1 h1 {
+   font-size : 1.5em;
+ }
+ #header .rayhantanahlot1 p {
+   font-size : 1em;
+ }
+}
+@media screen and (max-width:320px) {
+ .header-img {
+   height : 250px;
+ }
+ #header .header-desc {
+   top : 5px;
+ }
+ #header .header-img {
+   background-size : auto 300px;
+ }
+ #header .rayhantanahlot1 h1,
+ #header .rayhantanahlot1 p {
+   width   : 80%;
+   padding : 10px 5px;
+ }
+ #header .rayhantanahlot1 h1 {
+   font-size : 1.5em;
+ }
+ #header .rayhantanahlot1 p {
+   font-size : 0.8em;
+ }
+}
+
+/* ============================================================
+*  ============  ABOUT ME  ============
+*  ============================================================ */
+.aboutme-icon {
+ display    : inline-block;
+ margin     : 50px auto;
+ text-align : center;
+}
+.aboutme-icon i {
+ display       : inline-block;
+ margin        : 20px 0;
+ padding       : 15px 20px;
+ color         : #555;
+ border        : 2px solid #555;
+ border-radius : 50px;
+}
+.aboutme-icon img {
+ width  : 150px;
+ height : 150px;
+ margin : 10px auto;
+}
+.aboutme-items {
+ margin        : 10px 0;
+ padding       : 0 20px;
+ border        : 0;
+ border-bottom : 0px solid rgba(85,85,85,0);
+ border-radius : 0%;
+ font-family   : hammersmith one;
+ opacity       : 0.8;
+ transition    : all 0.3s ease-in-out;
+}
+.aboutme-items q {
+ width      : 80%;
+ color      : #555;
+ font-size  : 1.5em;
+ filter     : opacity(50%);
+ background : url('../images/quote.png') no-repeat;
+}
+.aboutme-items:hover {
+ border-bottom : 3px solid rgba(85,85,85,1);
+ border-radius : 100%;
+ opacity       : 1;
+}
+.aboutme-items:nth-child(3) {
+ border  : 0;
+ opacity : 1;
+}
+@media screen and (max-width:1024px) {
+ .aboutme-icon {
+   display    : inline-block;
+   width      : 100%;
+   margin     : 10px auto;
+   text-align : center;
+ }
+ .aboutme-icon img {
+   width  : 300px;
+   height : 300px;
+ }
+ .aboutme-items {
+   display : none;
+   border  : 0;
+ }
+ .aboutme-items q {
+   font-size : 1.2em;
+ }
+ .aboutme-items:nth-child(3) {
+   display : block;
+   width   : 100%;
+ }
+}
+@media screen and (max-width:480px) {
+ .aboutme-icon img {
+   width  : 150px;
+   height : 150px;
+ }
+}
+
+/* ============================================================
+*  ============  PORTOFOLIO  ============
+*  ============================================================ */
+#portofolio {
+ background-color : #E5E6EE;
+}
+#portofolio-slider {
+ padding : 5%;
+}
+#portofolio-slider .item {
+ position : relative;
+}
+#portofolio-slider img {
+ width  : 100%;
+ height : 150px;
+}
+.porthover {
+ display          : flex;
+ position         : absolute;
+ top              : -100%;
+ width            : 100%;
+ height           : 100%;
+ background-color : rgba(85,85,85,.7);
+ transition       : all 400ms ease-in-out;
+ justify-content  : center;
+ align-items      : center;
+ flex-direction   : column;
+}
+.porthover i {
+ top              : 100%;
+ padding          : 10px 15px;
+ color            : white;
+ border           : 0;
+ border-radius    : 50px;
+ opacity          : 0.7;
+ background-color : rgba(51,51,51,1);
+ transition       : all 400ms ease-in-out;
+ cursor           : pointer;
+}
+#portofolio-slider .item:hover .porthover,
+#portofolio-slider .item:hover i {
+ top : 0%;
+}
+.porthover i:hover {
+ opacity : 1;
+}
+@media screen and (max-width:768px) {
+ #portofolio-slider img {
+   height : 250px;
+ }
+}
+@media screen and (max-width:480px) {
+ #portofolio-slider img {
+   height : 200px;
+ }
+}
+@media screen and (max-width:320px) {
+ #portofolio-slider img {
+   height : auto;
+ }
+}
+/* ============================================================
+*  ============  SOCMED  ============
+*  ============================================================ */
+#socmed .socmed-icon {
+ position : relative;
+ width    : 100%;
+ margin   : 50px 0 0 0;
+ padding  : 0 20px;
+}
+#socmed .socmed-icon i {
+ width            : 100%;
+ margin           : 20px 0;
+ padding          : 20px 0;
+ color            : white;
+ border           : 5px solid #333;
+ border-top       : 0;
+ border-left      : 0;
+ border-radius    : 50px;
+ text-align       : center;
+ opacity          : 0.7;
+ background-color : #555;
+ transition       : all 200ms ease-in-out;
+ cursor           : pointer;
+}
+#socmed .socmed-icon i:hover {
+ opacity : 1;
+}
+.socmed-link {
+ width       : 100%;
+ margin      : 20px 0;
+ text-align  : center;
+ font-family : comfortaa;
+}
+.socmed-link h3 {
+ font-size : 3.5em;
+}
+.socmed-link a {
+ padding          : 5px 10px;
+ color            : white;
+ font-size        : 1.5em;
+ opacity          : 0.7;
+ background-color : #555;
+ transition       : all 200ms ease-in-out;
+}
+.socmed-link a:hover {
+ text-decoration : none;
+ opacity         : 1;
+}
+@media screen and (max-width:480px) {
+ .facebook,
+ .github,
+ .googleplus {
+   width : 33%;
+ }
+ .twitter, .youtube {
+   width : 50%;
+ }
+ .facebook i,
+ .github i,
+ .googleplus i {
+   wid : ;
+ }
+ .socmed-link h3 {
+   font-size : 1.5em;
+ }
+ .socmed-link a {
+   padding   : 2px 5px;
+   font-size : 1em;
+ }
+}
+
+/* ============================================================
+*  ============  CONTACT  ============
+*  ============================================================ */
+#contact {
+ font-family      : hammersmith one;
+ background-color : whitesmoke;
+}
+.contact-wrap {
+ display         : flex;
+ margin          : 50px auto;
+ align-items     : center;
+ justify-content : space-around;
+ flex-direction  : row;
+}
+#contact .contact-desc,
+#contact .contact-form {
+ display : inline-block;
+ height  : auto;
+ padding : 20px 10px;
+}
+#contact .contact-form {
+ background : #333;
+}
+.contact-form .wrapper-contact-form {
+ display         : flex;
+ margin          : 10px 0;
+ justify-content : center;
+ align-items     : flex-start;
+ flex-direction  : row;
+}
+.contact-form .fa {
+ padding          : 6px 10px;
+ color            : #333;
+ border           : 2px solid #555;
+ border-right     : 0;
+ border-radius    : 5px 0 0 5px;
+ background-color : #fff;
+}
+.contact-form input,
+.contact-form textarea {
+ width   : 80%;
+ padding : 10px 15px;
+ border  : 2px solid #555;
+}
+.contact-form button {
+ color            : #333;
+ background-color : 333;
+}
+@media screen and (max-width:768px) {
+ .contact-wrap {
+   flex-direction : column;
+ }
+ .contact-desc,
+ .contact-form {
+   width : 100%;
+ }
+}
+@media screen and (max-width:480px) {
+ .contact-form .fa {
+   width     : 100%;
+   font-size : 17px;
+ }
+ .contact-form .wrapper-contact-form {
+   margin         : 10px 0;
+   flex-direction : column;
+ }
+ .contact-form input,
+ .contact-form textarea {
+   display : block;
+   width   : 100%;
+   padding : 5px 10px;
+ }
+}
+/* ============================================================
+*  ============  FOOTER  ============
+*  ============================================================ */
+footer {
+ display             : flex;
+ width               : 100%;
+ height              : 200px;
+ color               : white;
+ font-family         : comfortaa;
+ background          : url('../images/kunjungan-industri/raylot1.jpg') no-repeat fixed;
+ background-position : top;
+ background-size     : auto 700px;
+ align-items         : center;
+ justify-content     : center;
+ flex-direction      : column;
+}
+.footer-nav ul li a {
+ padding : 10px auto;
+ color   : whitesmoke;
+}
+.footer-nav {
+ text-align : left;
+}
+.footer-nav ul li a:hover {
+ text-decoration : underline;
+ background      : transparent;
+}
+@media screen and (max-width:768px) {
+ footer {
+   height:300px;
+   text-align      : center;
+   background-size : auto 600px;
+ }
+}
